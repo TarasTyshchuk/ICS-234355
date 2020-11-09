@@ -4,7 +4,7 @@
 
 
 def get_dovidnyk():
-    """ Повертає дані довідника, який отримує ззовні
+    """ Повертає дані довідника, які отримує з файлу "dovidnyk.txt"
 
     Returns:
         dani_dovidnyka: дані довідника
@@ -52,7 +52,7 @@ show_dovidnyk(dovidnyk)
 
 
 def get_osnovni_pokaznyky():
-    """ Повертає дані основних показнкиів, який отримує ззовні
+    """ Повертає дані основних показнкиів, який отримує з "osnovni_pokaznyky.txt"
 
     Returns:
         dani_osnovnyh_pokaznykiv: дані основних показників
@@ -75,7 +75,7 @@ def get_osnovni_pokaznyky():
     return dani_osnovnyh_pokaznykiv
 
 def show_osnovni_pokaznyky(osnovni_pokaznyky):
-    """ Виводить на екран список показників заданого діапазона
+    """ Виводить на екран список показників 
 
     Args:
         osnovni_pokaznyky ([list]): основні показники
