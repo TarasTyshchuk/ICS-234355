@@ -19,7 +19,7 @@ def get_dovidnyk():
 
     for line in from_file: 
         #відрізати '\n' в кінці рядка
-        line = line[:-2]
+        
         line_list = line.split(';')
         dani_dovidnyka.append(line_list)
 
@@ -40,7 +40,7 @@ def show_dovidnyk(dovidnyk):
     
     for client in dovidnyk:
         if client_code_from <= client[0] <= client_code_to:
-            print("Код підприємства: {} Назва: {}".format(client[0], client[1]))
+            print("Код показника: {:5} Назва показника: {:44} Одиниця виміру: {:5}".format(client[0], client[1], client[2]))
             kol_lines += 1
 
     if kol_lines == 0:
@@ -67,7 +67,7 @@ def get_osnovni_pokaznyky():
 
     for line in from_file: 
         #відрізати '\n' в кінці рядка
-        line = line[:-2]
+        
         line_list = line.split(';')
         dani_osnovnyh_pokaznykiv.append(line_list)
 
@@ -88,7 +88,7 @@ def show_osnovni_pokaznyky(osnovni_pokaznyky):
 
     for client in osnovni_pokaznyky:
         if client_code_from <= client[0] <= client_code_to:
-            print("Код підприємства: {} Період: {:11} Товарообіг: {:10} Прибуток: {:7} Середньорічна вартість осн. засобів: {:7} ".format(client[0], client[1], client[2], client[3], client[4]))
+            print("Підприємство: {:22} Код показника: {:5} Базовий рік: {:11} Попередній рік: {:11} Поточний рік: {} ".format(client[0], client[1], client[2], client[3], client[4]))
             kol_lines += 1
     if kol_lines == 0:
         print("Не існує")
