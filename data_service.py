@@ -27,20 +27,19 @@ def get_dovidnyk():
     return dani_dovidnyka
 
 def show_dovidnyk(dovidnyk):
-    """ Виводить на екран список чогось заданого діапазона
+    """ Виводить на екран список довідник показників підприємства за заданим кодом
 
     Args:
         dovidnyk ([list]): довідник
     """
   
-    client_code_from = input("З якого кода довідника? ")
-    client_code_to   = input("По який код довідника? ")
+    nazva_pokaznyka_code = input("Введіть код довідника: ")
 
     kol_lines = 0
     
-    for client in dovidnyk:
-        if client_code_from <= client[0] <= client_code_to:
-            print("Код показника: {:5} Назва показника: {:44} Одиниця виміру: {:5}".format(client[0], client[1], client[2]))
+    for nazva_pokaznyka in dovidnyk:
+        if nazva_pokaznyka_code == nazva_pokaznyka[0]:
+            print("Код показника: {:5} Назва показника: {:44} Одиниця виміру: {:5}".format(nazva_pokaznyka[0], nazva_pokaznyka[1], nazva_pokaznyka[2]))
             kol_lines += 1
 
     if kol_lines == 0:
@@ -75,20 +74,19 @@ def get_osnovni_pokaznyky():
     return dani_osnovnyh_pokaznykiv
 
 def show_osnovni_pokaznyky(osnovni_pokaznyky):
-    """ Виводить на екран список показників 
+    """ Виводить на екран список основних показників діяльності підприємства по заданому коду
 
     Args:
         osnovni_pokaznyky ([list]): основні показники
     """
   
-    client_code_from = input("З якого кода показників? ")
-    client_code_to   = input("По який код показників? ")
+    pokaznyk_code = input("Введіть код показника: ")
 
     kol_lines = 0
 
-    for client in osnovni_pokaznyky:
-        if client_code_from <= client[0] <= client_code_to:
-            print("Підприємство: {:22} Код показника: {:5} Базовий рік: {:11} Попередній рік: {:11} Поточний рік: {} ".format(client[0], client[1], client[2], client[3], client[4]))
+    for pokaznyk in osnovni_pokaznyky:
+        if pokaznyk_code == pokaznyk[1]:
+            print("Підприємство: {:22} Код показника: {:5} Базовий рік: {:11} Попередній рік: {:11} Поточний рік: {} ".format(pokaznyk[0], pokaznyk[1], pokaznyk[2], pokaznyk[3], pokaznyk[4]))
             kol_lines += 1
     if kol_lines == 0:
         print("Не існує")
