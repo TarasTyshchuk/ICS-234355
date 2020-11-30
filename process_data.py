@@ -79,6 +79,7 @@ def create_analiz():
         index_work['unit']          = get_unit(pokaznyk[0])
 
     return index_list
+
 indexes = create_analiz()
 for item in indexes:
     print(item)
