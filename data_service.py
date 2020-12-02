@@ -11,7 +11,7 @@ def get_dovidnyk():
     """
 
     
-    with open("./data/dovidnyk.txt") as dovidnyk_file:
+    with open("./data/dovidnyk.txt", encoding="utf-8") as dovidnyk_file:
         from_file = dovidnyk_file.readlines()
 
     # накопичувач клієнтів
@@ -58,7 +58,7 @@ def get_osnovni_pokaznyky():
     """
 
     
-    with open("./data/osnovni_pokaznyky.txt") as pokaznyky_file:
+    with open("./data/osnovni_pokaznyky.txt", encoding="utf-8") as pokaznyky_file:
         from_file = pokaznyky_file.readlines()
 
     # накопичувач клієнтів
