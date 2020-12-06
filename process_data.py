@@ -72,9 +72,9 @@ def create_analiz():
         index_work['pre_year']      = pokaznyk[3]
         index_work['curr_year']     = pokaznyk[4]
         index_work['deviation +']   = float(index_work['curr_year']) - float(index_work['basic_year'])
-        index_work['+ in percent']  = float(index_work['curr_year']) % float(index_work['basic_year'])
+        index_work['+ in percent']  = float(index_work['curr_year']) / float(index_work['basic_year'])
         index_work['deviation -']   = float(index_work['curr_year']) - float(index_work['pre_year'])
-        index_work['- in percent']  = float(index_work['curr_year']) % float(index_work['pre_year'])
+        index_work['- in percent']  = float(index_work['curr_year']) / float(index_work['pre_year'])
         index_work['index_name']    = get_index_name(pokaznyk[1])
         index_work['unit']          = get_unit(pokaznyk[1])
         

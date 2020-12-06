@@ -19,7 +19,7 @@ def get_dovidnyk():
 
     for line in from_file: 
         #відрізати '\n' в кінці рядка
-        
+        line = line[:-1]
         line_list = line.split(';')
         dani_dovidnyka.append(line_list)
 
@@ -66,7 +66,7 @@ def get_osnovni_pokaznyky():
 
     for line in from_file: 
         #відрізати '\n' в кінці рядка
-        
+        line = line[:-1]
         line_list = line.split(';')
         dani_osnovnyh_pokaznykiv.append(line_list)
 
