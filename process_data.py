@@ -82,6 +82,6 @@ def create_analiz():
 
     return index_list
 
-indexes = create_analiz()
-for item in indexes:
-    print(item)
+# indexes = create_analiz()
+# for item in indexes:
+#     print(item)

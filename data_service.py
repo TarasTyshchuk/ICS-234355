@@ -39,14 +39,14 @@ def show_dovidnyk(dovidnyk):
     
     for nazva_pokaznyka in dovidnyk:
         if nazva_pokaznyka_code == nazva_pokaznyka[0]:
-            print("Код показника: {:5} Назва показника: {:44} Одиниця виміру: {:5}".format(nazva_pokaznyka[0], nazva_pokaznyka[1], nazva_pokaznyka[2]))
+            print("Код показника: {:4} Назва показника: {:25} Одиниця виміру: {:5}".format(nazva_pokaznyka[0], nazva_pokaznyka[1], nazva_pokaznyka[2]))
             kol_lines += 1
 
     if kol_lines == 0:
         print("Не існує")
 
 dovidnyk = get_dovidnyk()   
-show_dovidnyk(dovidnyk)
+# show_dovidnyk(dovidnyk)
 
 
 
@@ -86,10 +86,10 @@ def show_osnovni_pokaznyky(osnovni_pokaznyky):
 
     for pokaznyk in osnovni_pokaznyky:
         if pokaznyk_code == pokaznyk[1]:
-            print("Підприємство: {:22} Код показника: {:5} Базовий рік: {:11} Попередній рік: {:11} Поточний рік: {} ".format(pokaznyk[0], pokaznyk[1], pokaznyk[2], pokaznyk[3], pokaznyk[4]))
+            print("Підприємство: {:14}; Код показника: {:4}; Базовий рік: {:11}; Попередній рік: {:11}; Поточний рік: {}; ".format(pokaznyk[0], pokaznyk[1], pokaznyk[2], pokaznyk[3], pokaznyk[4]))
             kol_lines += 1
     if kol_lines == 0:
         print("Не існує")
 
 osnovni_pokaznyky = get_osnovni_pokaznyky()   
-show_osnovni_pokaznyky(osnovni_pokaznyky)
+# show_osnovni_pokaznyky(osnovni_pokaznyky)
