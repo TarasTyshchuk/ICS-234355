@@ -39,7 +39,7 @@ def show_dovidnyk(dovidnyk):
     
     for nazva_pokaznyka in dovidnyk:
         if nazva_pokaznyka_code == nazva_pokaznyka[0]:
-            print("Код показника: {:4} Назва показника: {:25} Одиниця виміру: {:5}".format(nazva_pokaznyka[0], nazva_pokaznyka[1], nazva_pokaznyka[2]))
+            print("Код показника: {:4}; Назва показника: {:25}; Одиниця виміру: {:5};".format(nazva_pokaznyka[0], nazva_pokaznyka[1], nazva_pokaznyka[2]))
             kol_lines += 1
 
     if kol_lines == 0:
