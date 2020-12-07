@@ -81,7 +81,13 @@ def write_analiz(index_list):
 
 while True:
 
-    os.system('clear')
+    # очистити екран для Windows
+    clear = lambda: os.system('cls')
+    clear()
+
+    # очистити екран для Linux i Mac
+    clear = lambda: os.system('clear')
+
     print(MAIN_MENU)
     command_number = input("Введіть номер команди: ")
 
